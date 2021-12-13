@@ -1,0 +1,16 @@
+@font-face {
+  font-family: futura;
+  src:
+    local(futura),
+    url("../assets/fonts/futura-md-bt-medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+body {
+  margin: 0;
+  font-family: futura, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

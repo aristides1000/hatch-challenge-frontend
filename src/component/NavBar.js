@@ -24,11 +24,11 @@ const NavBar = () => {
   }, []);
 
   return (
-    <Navbar expand="lg">
+    <Navbar bg="transparent" className="sticky-top position-absolute" expand="lg">
       <Container fluid className="d-flex justify-content-between">
         <Navbar.Brand href="/">
-          <Image src={logo} className="image-size border-0" thumbnail />
-          <span className="ml-2">Easy Address</span>
+          <Image src={logo} bg="transparent" className="image-size border-0 shadowed" />
+          <span className="ml-2 shadowed text-light">Easy Address</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="d-flex justify-content-end align-items-center">
@@ -39,10 +39,10 @@ const NavBar = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="/">Agregar una dirección</Nav.Link>
-              <Nav.Link href="/Addresses_lists">Mis direcciones</Nav.Link>
+              <Nav.Link href="/" className="shadowed link-light">Agregar una dirección</Nav.Link>
+              <Nav.Link href="/Addresses_lists" className="shadowed link-light">Mis direcciones</Nav.Link>
             </Nav>
-            <p className="pe-1 m-0">
+            <p className="pe-1 m-0 ms-auto shadowed text-light border-start ps-3 ms-1">
               Bienvenido de nuevo
               <span className="ms-2 text-uppercase">{user.name}</span>
             </p>
@@ -50,18 +50,14 @@ const NavBar = () => {
             </>
           ) : (
             <>
-              <Button className="mx-2">
-                <Link to="/sign_in" className="link-light">
-                  <FaSignInAlt className="me-2" />
-                  Iniciar sesión
-                </Link>
-              </Button>
-              <Button className="mx-1">
-                <Link to="/sign_up" className="link-light">
-                  <FiUserPlus className="me-2" />
-                  Crear cuenta
-                </Link>
-              </Button>
+              <Link to="/sign_in" className="link-light border-start shadowed text-decoration-none ps-3 border-2 border-light pe-1">
+                <FaSignInAlt className="me-2" />
+                Iniciar sesión
+              </Link>
+              <Link to="/sign_up" className="link-light ms-2 border-start shadowed text-decoration-none ps-3 border-2 border-light">
+                <FiUserPlus className="me-2" />
+                Crear cuenta
+              </Link>
             </>
           )}
         </Navbar.Collapse>
