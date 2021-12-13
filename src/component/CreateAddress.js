@@ -61,7 +61,7 @@ const CreateAddress = () => {
         <div className="container-fluid d-flex flex-column justify-content-center align-items-center content-height bg-image-create-address">
           <div className="col-8">
             <h2 className="light-font">Agrega una dirección</h2>
-            <InputGroup className="mb-3">
+            {/*<InputGroup className="mb-3">
               <FormControl
                 placeholder="Coloca tu dirección"
                 aria-label="Coloca tu dirección"
@@ -71,7 +71,7 @@ const CreateAddress = () => {
                 <MdOutlineAddLocation className="me-2" />
                 Agregar dirección
               </Button>
-            </InputGroup>
+            </InputGroup>*/}
             <Form
               onSubmit={handleSubmit}
             >
